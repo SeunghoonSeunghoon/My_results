@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starbucks Coffee Korea</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+<link rel="stylesheet" href="css/main-3.css"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+<style>
+  body {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+/*INNER*/
+.inner {
+    width: 1100px;
+    margin: 0 auto; 
+    position: relative; 
+    
+}
+
+/*HEADER*/
+header {
+    width: 100%;
+    position: static; 
+    top: 0;
+    z-index: 9;
+    background-color: #F6F5F0;
+    border-bottom: 1px solid #c8c8c8;
+}
+
+header .inner { 
+    height: 120px;
+}
+
+header .logo {
+    height: 75px;
+    position: relative; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto; 
+}
+
+.sub-menu {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: flex; 
+    
+}
+
+.sub-menu ul.menu { 
+    font-family: Arial, sans-serif;
+    display: flex; 
+    list-style: none;
+}
+
+.sub-menu .menu { 
+    position: relative;
+}
+
+.sub-menu ul.menu li a {
+    padding: 11px 16px;
+    display: block;
+    font-size: 13px;
+    color: #656565;
+}
+
+.sub-menu ul.menu li a:hover {
+    color: black;
+}
+
+.sub-menu .search {
+    position: relative; 
+    height: 34px;
+    margin: auto;
+
+}
+
+.sub-menu .search input {
+
+    width: 190px;
+    height: inherit; 
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    color: #777;
+    font-size: 12px;
+}
+
+.sub-menu .search .material-icons {
+    height: 24px;
+    position: absolute; 
+    top: 0;
+    bottom: 0;
+    right: 5px;
+    margin: 0 auto; 
+
+}
+
+.main-menu {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    display: flex; 
+}
+
+.main-menu .item .item__name {
+    padding: 10px 20px 34px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.main-menu .item:hover .item__name {
+    background-color: #2C2A29;
+    color: #669900;
+    border-radius: 6px 6px 0 0;
+}
+
+.main-menu .item .item__contents {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    display: none;
+}
+
+.main-menu .item:hover .item__contents {
+    display: block; 
+}
+
+.main-menu .item .item__contents .contents__menu {
+    background-color: #2C2A29;
+}
+
+.main-menu .item .item__contents .contents__menu > ul {
+    padding: 20px 0;
+    display: flex; 
+}
+
+.main-menu .item .item__contents .contents__menu > ul > li {
+    width: 220px;
+}
+
+.main-menu .item .item__contents .contents__menu > ul > li h4 {
+    padding: 3px 0 12px 0;
+    font-size: 14px;
+    color: #fff;
+}
+
+.main-menu .item .item__contents .contents__menu > ul > li ul li {
+    padding: 5px 0;
+    font-size: 12px;
+    color: #999;
+    cursor: pointer; 
+}
+
+.main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
+    color: #669900;
+}
+
+.main-menu .item .item__contents .contents__texture {
+    padding: 26px 0;
+    font-size: 12px;
+    background-image: url("../images/main_menu_pattern.jpg");
+}
+
+.main-menu .item .item__contents .contents__texture h4 {
+    color: #999;
+    font-weight: 900;
+}
+
+.main-menu .item .item__contents .contents__texture p {
+    color: #64a70b;
+    margin: 4px 0 14px;
+}
+
+.btn {
+   width:130px;
+   padding:10px;
+   border:2px solid #333;
+   color:black;
+   font-size:16px;
+   font-weight:700;
+   text-align:center;
+   cursor:pointer;
+   box-sizing:border-box;
+   display:block;
+   transition:.4s;
+}
+.btn:hover{
+   background-color: #333;
+   color: #FFF;
+}
+.visual {
+   
+   background-image: url("../images/visual_bg.jpg");
+   background-position:center;
+   
+}
+.visual .inner {
+   height:646px;
+   position:relative;
+}
+.visual .title {
+   position:absolute;
+   top:88px;
+   left:-10px;
+}
+.visual .title .btn {
+   position:absolute;
+   top:259px;
+   left:173px;
+}
+.visual .cup1.image {
+   position:absolute;
+   bottom:0;
+   right:-47px;
+}
+.visual .cup1.text {
+   position:absolute;
+   top:38px;
+   right:171px;
+}
+.visual .cup2.image {
+   position:absolute;
+   bottom:0;
+   right:162px;
+}
+.visual .cup2.text {
+   position:absolute;
+   top: 321px;
+   right:416px;
+   
+}
+.visual .spoon {
+   position: absolute;
+   bottom:0;
+   left:275px;
+}
+</style>
+</head>
+<body>
+  <header>
+       <div class="inner">
+        <a href="/" class="logo">
+            <img src="./images/starbucks_logo.png" alt="STARBUCKS"/>
+        </a>
+        <div class="sub-menu">
+            <ul class="menu">
+                <li>
+                    <a href="/signin">Sign In</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">My Starbucks</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">Customer Service & Ideas</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">Find a Store</a>
+                </li>
+            </ul>
+            <div class="search">
+                <input type="text"/>
+                <div class=material-icons>search</div>
+            </div>
+        </div>
+  <!-----6-2. main menu----------->
+  <ul class="main-menu">
+    <!-- 메인메뉴 한세트 -->
+    <li class="item">
+      <div class="item__name">COFFEE</div>
+      <div class="item__contents">
+        <div class="contents__menu">
+          <ul>
+            <li><h4>커피</h4>
+              <ul>
+                <li>스타벅스 원두</li>
+                <li>스타벅스 비아</li>
+                <li>스타벅스 오리가미</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </li>
+
+    <li class="item">
+      <div class="item__name">MENU</div>
+      <div class="item__contents"></div>
+    </li>
+    <li class="item">
+      <div class="item__name">STORE</div>
+      <div class="item__contents"></div>
+    </li>
+    <li class="item">
+      <div class="item__name">RESPONSIBILITY</div>
+      <div class="item__contents"></div>
+    </li>
+    <li class="item">
+      <div class="item__name">MY STARBUCKS</div>
+      <div class="item__contents"></div>
+    </li>
+    <li class="item">
+      <div class="item__name">WHAT'S NEW</div>
+      <div class="item__contents"></div>
+    </li>
+  </ul>
+  </div>
+   </header>
+
+   <section class="visual">
+      <div class="inner">
+         <div class="title fade-in">
+            <img src="./images/visual_title.png" alt="STARBUCKS">
+            <a href="javascript:void(0)" class="btn btn--brown">자세히 보기</a>
+         </div>
+         <div class="fade-in">
+            <img src="./images/visual_cup1.png" alt="ne" class="image">
+            <img src="./images/visual_cup1_text.png" alt="오트밀 라떼" class="cup1_text">
+         </div>
+         <div class="fade-out">
+            <img src="./images/visual_cup2.png" alt="new" class="image">
+            <img src="./images/visual_cup2_text.png" alt="스타벅스 카라멜 크럼블 모카" class="cup2_text">
+         </div>
+         <div class="title-fade-out">
+            <img src="./images/visual_spoon.png" alt="Spoon" class="spoon">
+         </div>
+         
+      </div>
+   </section>
+  
+</body>
+</html>
