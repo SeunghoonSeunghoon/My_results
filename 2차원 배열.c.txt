@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+    int n,m,arr[101][101]={0,},num,cnt=1;
+    scanf("%d %d",&n,&m);
+    for(int num=0;num<=n+m-1;num++){
+        for(int y=0;y<m;y++){
+            for(int x=0;x<n;x++){
+                if(x+y==num){
+                    arr[y][x]=cnt;
+                    cnt++;
+                }
+            }
+        }
+    }
+    for(int y=0;y<n;y++){
+        for(int x=0;x<m;x++){
+            printf("%d ",arr[x][y]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
